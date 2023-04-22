@@ -20,8 +20,10 @@ using DiscordRPC;
 
 namespace Intersect.Client.Plugins.Discord
 {
-    public DiscordRpcClient client;
-    void Initialize() 
+    public static class DiscordRpcHandler 
+    {
+    public static DiscordRpcClient client;
+    public static void Initialize() 
     {
         /*
         Create a Discord client
@@ -55,6 +57,7 @@ namespace Intersect.Client.Plugins.Discord
                 SmallImageKey = "placeholder"
             }
         });	
+    }
     }
     
 }

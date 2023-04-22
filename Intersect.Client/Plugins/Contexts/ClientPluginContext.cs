@@ -1,4 +1,5 @@
 ﻿using System;
+using DiscordRPC;
 using Intersect.Client.Core;
 using Intersect.Client.Framework.Audio;
 using Intersect.Client.Framework.Content;
@@ -9,6 +10,7 @@ using Intersect.Client.Framework.Plugins.Interfaces;
 using Intersect.Client.General;
 using Intersect.Client.Maps;
 using Intersect.Client.Plugins.Audio;
+using Intersect.Client.Plugins.Discord;
 using Intersect.Client.Plugins.Helpers;
 using Intersect.Client.Plugins.Interfaces;
 using Intersect.Factories;
@@ -72,6 +74,9 @@ namespace Intersect.Client.Plugins.Contexts
 
         /// <inheritdoc />
         public IAudioManager Audio { get; } = new AudioManager();
+        
+        /// <inheritdoc />
+        DiscordRpcHandler.Initialize();
 
         /// <inheritdoc />
         public override IClientLifecycleHelper Lifecycle { get; }
